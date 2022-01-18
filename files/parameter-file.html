@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4. Parameter file &mdash; Mandyoc</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. Input files" href="input.html" />
+    <link rel="prev" title="3. How to install" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Mandyoc
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="theory.html">1. Basic theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="implementation.html">2. Numerical implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">3. How to install</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Parameter file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">5. Input files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="benchmarks.html">6. Benchmarks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">7. References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting help and contributing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/ggciag/mandyoc/blob/main/CONTRIBUTING.md">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/ggciag/mandyoc/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/ggciag/mandyoc">Source code</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Mandyoc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><span class="section-number">4. </span>Parameter file</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/files/parameter-file.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="parameter-file">
+<span id="parameterfile"></span><h1><span class="section-number">4. </span>Parameter file<a class="headerlink" href="#parameter-file" title="Permalink to this headline">¶</a></h1>
+<p>The parameter file <code class="docutils literal notranslate"><span class="pre">param.txt</span></code> contains the information that is necessary for the simulation to run.</p>
+<ol class="arabic">
+<li><p>Geometry</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Number of elements in each direction</p></li>
+<li><p>The extension of the model</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Time constrains</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The time-step of the simulation</p></li>
+<li><p>Maximum time-step of the simulation</p></li>
+<li><p>Maximum time of the simulation (in seconds)</p></li>
+<li><p>Maximum time between steps of the simulation (in seconds)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Viscosity values</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The reference viscosity</p></li>
+<li><p>The minimum viscosity</p></li>
+<li><p>The maximum viscosity</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Physical parameters</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Gravity acceleration</p></li>
+<li><p>Heat capacity</p></li>
+<li><p>Coefficient of thermal conductivity</p></li>
+<li><p>Coefficient of thermal expansion</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Boundary conditions</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Temperature boundary condition at all borders</p></li>
+<li><p>Tangential velocity boundary conditions at all borders</p></li>
+<li><p>Normal velocity boundary conditions at all borders</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Rheology and temperature model numbers</p></li>
+<li><p>External initial temperature from ASCII file</p></li>
+<li><p>External initial interfaces from ASCII file</p></li>
+<li><p>External initial velocity files from ASCII file</p></li>
+<li><p>Type of solver</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Direct</p></li>
+<li><p>Iteractive</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Simulation options</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>denok</p></li>
+<li><p>rtol</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<p>Below there is an example of a parameter file <code class="docutils literal notranslate"><span class="pre">param.txt</span></code> used to make a simulation with <em>Mandyoc</em>.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span><span class="lineno"> 1 </span># Geometry
+<span class="lineno"> 2 </span>nx                        = 281        # N. of elements in the longitudinal direction
+<span class="lineno"> 3 </span>nz                        = 85         # N. of elements in the vertical direction
+<span class="lineno"> 4 </span>lx                        = 2800000.0  # Extent in the longitudinal direction
+<span class="lineno"> 5 </span>lz                        = 850000.0   # Extent in the vertical direction
+<span class="lineno"> 6 </span>
+<span class="lineno"> 7 </span># Simulation options
+<span class="lineno"> 8 </span># solver                  = direct     # [direct/iterative]
+<span class="lineno"> 9 </span>use_multigrid             = 1          # Enable multigrid
+<span class="lineno">10 </span># residual_norm_iter      = 1.0e-5
+<span class="lineno">11 </span># residual_norm_uzawa     = 1.0e-4
+<span class="lineno">12 </span>
+<span class="lineno">13 </span># Time constrains for the simulation
+<span class="lineno">14 </span>step_maxkjdfd             = 7000       # Maximum time-step of the simulation
+<span class="lineno">15 </span>step_print                = 10         # Make file every &lt;step_print&gt;
+<span class="lineno">16 </span>time_max                  = 14e9       # Maximum time of the simulation [s]
+<span class="lineno">17 </span>dt_max                    = 10.0e3     # Maximum time between steps of the simulation [s]
+<span class="lineno">18 </span>
+<span class="lineno">19 </span># Values for the viscosity
+<span class="lineno">20 </span>visc_ref                  = 1.0e+21    # Reference viscosity [Pa.s]
+<span class="lineno">21 </span>visc_max                  = 1.0e+23    # Maximum viscosity [Pa.s]
+<span class="lineno">22 </span>visc_min                  = 1.0e+19    # Minimum viscosity [Pa.s]
+<span class="lineno">23 </span>
+<span class="lineno">24 </span># External ASCII inputs
+<span class="lineno">25 </span>interfaces_from_ascii     = True       # Use &#39;interfaces.txt&#39; ASCII file
+<span class="lineno">26 </span># temperature_from_ascii  = True       # Use &#39;input_temperature_0.txt&#39; ASCII file
+<span class="lineno">27 </span>velocity_from_ascii       = False      # Use &#39;input_velocity_0.txt&#39; ASCII file
+<span class="lineno">28 </span>
+<span class="lineno">29 </span>geo=on#kdjfkdjf
+<span class="lineno">30 </span>geoq_fac                  = 100.0
+<span class="lineno">31 </span>surf_veloc                = 0.0e-2.
+<span class="lineno">32 </span>
+<span class="lineno">33 </span>temp_diff                 = 0
+<span class="lineno">34 </span>
+<span class="lineno">35 </span>
+<span class="lineno">36 </span># Physical parameters
+<span class="lineno">37 </span>heat_capacity             = 1250.0     # Heat capacity [J/K]
+<span class="lineno">38 </span>gravity                   = 10.0       # Gravity acceleration [m/s^2]
+<span class="lineno">39 </span>kappa                     = 1.0E-6     # Coefficient of thermal conductivity [W/(m.K)]
+<span class="lineno">40 </span>alpha                     = 3.28E-5    # Coefficient of thermal expansion [1/K]
+<span class="lineno">41 </span>rho_mantle                = 3300.      # Mantle&#39;s reference density [kg/m^3]
+<span class="lineno">42 </span>
+<span class="lineno">43 </span># External heat per mass unit
+<span class="lineno">44 </span>external_heat             = 0.0
+<span class="lineno">45 </span>
+<span class="lineno">46 </span>non_linear_method         = off
+<span class="lineno">47 </span>adiabatic_component       = off
+<span class="lineno">48 </span>radiogenic_component      = off
+<span class="lineno">49 </span>
+<span class="lineno">50 </span># Velocity boundary conditions
+<span class="lineno">51 </span># Normal velocity
+<span class="lineno">52 </span>top_normal_velocity       = fixed
+<span class="lineno">53 </span>bot_normal_velocity       = fixed
+<span class="lineno">54 </span>left_normal_velocity      = fixed
+<span class="lineno">55 </span>right_normal_velocity     = fixed
+<span class="lineno">56 </span># Tangential velocity
+<span class="lineno">57 </span>top_tangential_velocity   = free
+<span class="lineno">58 </span>bot_tangential_velocity   = fixed
+<span class="lineno">59 </span>left_tangential_velocity  = free
+<span class="lineno">60 </span>right_tangential_velocity = free
+<span class="lineno">61 </span>
+<span class="lineno">62 </span># Temperature boundary conditions
+<span class="lineno">63 </span>top_temperature           = fixed
+<span class="lineno">64 </span>bot_temperature           = fixed
+<span class="lineno">65 </span>left_temperature          = fixed
+<span class="lineno">66 </span>right_temperature         = fixed
+<span class="lineno">67 </span>
+<span class="lineno">68 </span># Rheology model
+<span class="lineno">69 </span>rheology_model            = 0          # Number of the rheology model for the simulation
+<span class="lineno">70 </span>initial_temperature       = 9          # Number of the temperature model for the simulation
+<span class="lineno">71 </span>
+<span class="lineno">72 </span>
+<span class="lineno">73 </span># Initial model
+<span class="lineno">74 </span># lithosphere_thickness   = 80.0e4
+<span class="lineno">75 </span># air_layer_thickness     = 0.0
+<span class="lineno">76 </span># beta_max                = 3.0
+<span class="lineno">77 </span># ramp_begin              = 2000.0e3
+<span class="lineno">78 </span># ramp_end                = 2200.0e3
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-left" title="3. How to install" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="input.html" class="btn btn-neutral float-right" title="5. Input files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2022, The Mandyoc Developers.
+      <span class="lastupdated">Last updated on Jan 18, 2022.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
